@@ -1,0 +1,35 @@
+Install the application
+
+To install the application we need “composer” (https://getcomposer.org/download/) and them execute:
+
+>composer install 
+
+That will the FastRoute and the PHPunit library. To run the PHPunit on the project, we exec 
+
+>composer test
+
+To run the proyect into a PHP build-in server we execute:
+
+>composer run 
+
+And open a browser at “http://12.0.0.1:8080/” and use any of the next pre-charge count:
+
+- User: p1, Password: p_1
+- User: p2, Password: p_2
+- User: p3, Password: p_3
+
+To administrate the use a REST API whit the account “admin”, “pass” (login and password), with the API:
+
+GET /admin/user => List all user available on system
+
+GET  /admin/user/<username> => List the information of <username> or empty array if there is not one
+
+DELETE  /admin/user/<username> => Delete the user <username> of the system
+
+POST /admin/user => Create a new user on the syste, POST Array [‘username’=><username>, ‘rol’=><user_rol>, ‘password’=> <user_password>]
+
+
+PUT /rol/<username>/<rol_new> => Change the rol to <rol_new> at user <username>
+
+PUT /password/<username>/<password_new> => Change the password to <password_new> at user <username>
+
